@@ -1,16 +1,18 @@
-# mtsfluttertestapp
-
-A new Flutter application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Тестовое задание по Flutter
+Задача:
+Написать приложение, которое при нажатии на кнопку будет загружать изображение из
+ассетов, сжимать его до максимального размера 1200x1200 пикселей с сохранением
+соотношения сторон, вырезать область из центра с соотношением сторон 16:9 и
+отображать полученный результат на экране. В процессе сжатия/обрезки отображать
+поверх всех остальных элементов или в NavigationBar’е анимированный индикатор
+активности
+Минимальные требования:
+1 Время выполнения операций не должно быть слишком долгим для пользователя
+2 При выполнении UI не должен блокироваться (зависать, становиться не
+отзывчивым к касаниям)
+3 Приложение не должно использовать платформенные плагины для обработки
+изображений, все операции должны выполняться средствами dart. Допускается
+использование пакетов, идущих в составе Флаттера, а также любых пакетов из dart-
+sdk
+4 Соблюдение единой стилистики кода. После выполнения задачи прогнать
+приложение через flutter format

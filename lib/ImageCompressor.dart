@@ -16,9 +16,9 @@ class ImageCompressor extends StatefulWidget {
 
 class _ImageCompressorState extends State<ImageCompressor> {
   ImageProvider provider;
-  Size size = Size.fromWidth(1);
+  Size size = Size(0, 0);
   double yPosition = 0;
-  bool isProgressBarShown = false;
+  bool isProgressBarShown = true;
 
   void _testCompressFile() async {
     setState(() {
@@ -57,6 +57,7 @@ class _ImageCompressorState extends State<ImageCompressor> {
     Size size = await calculateImageSize(image);
     setState(() {
       this.size = size;
+      this.isProgressBarShown = false;
     });
   }
 
@@ -68,7 +69,11 @@ class _ImageCompressorState extends State<ImageCompressor> {
     }
     return Column(
       children: <Widget>[
-        this.isProgressBarShown ? LinearProgressIndicator() : Container(),
+        this.isProgressBarShown
+            ? LinearProgressIndicator()
+            : Container(
+                height: 6,
+              ),
         FlatButton(
           child: Text('Compress file'),
           color: Colors.green,

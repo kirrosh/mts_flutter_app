@@ -18,6 +18,14 @@ class ImageListScreen extends StatelessWidget {
               fileName: '3567x5350.jpg',
               dimensionsTitle: '3567 X 5350',
             ),
+            ListItem(
+              fileName: '4000x2327.jpg',
+              dimensionsTitle: '4000 X 2327',
+            ),
+            ListItem(
+              fileName: '5472x3648.jpg',
+              dimensionsTitle: '5472 X 3648',
+            ),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
@@ -38,7 +46,10 @@ class ListItem extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => SingleImageScreen(),
+            builder: (context) => SingleImageScreen(
+              fileName: this.fileName,
+              dimensionsTitle: this.dimensionsTitle,
+            ),
           ),
         );
       },

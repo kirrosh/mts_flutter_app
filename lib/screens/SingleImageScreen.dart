@@ -4,12 +4,16 @@ import '../ImageCompressor.dart';
 
 class SingleImageScreen extends StatelessWidget {
   final String fileName;
+  final String dimensionsTitle;
 
-  const SingleImageScreen({Key key, this.fileName}) : super(key: key);
+  const SingleImageScreen({Key key, this.fileName, this.dimensionsTitle})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(this.dimensionsTitle),
+      ),
       body: Center(
         child: ImageCompressor(
           fileName: this.fileName,
